@@ -3,16 +3,16 @@ const path = require("path");
 const puppeteer = require('puppeteer');
 const handlebars = require("handlebars");
 
-async function createPDF(student){
+async function createPDF(data){
 
 	var templateHtml = fs.readFileSync(path.join(process.cwd(), 'template.html'), 'utf8');
 	var template = handlebars.compile(templateHtml);
-	var html = template(student);
+	var html = template(data);
 
 	var milis = new Date();
 	milis = milis.getTime();
 
-	var pdfPath = path.join('pdf', `${student.name}-${milis}.pdf`);
+	var pdfPath = path.join('pdf', `${data.name}-${milis}.pdf`);
 
 	var options = {
 		width: '1230px',
@@ -42,8 +42,14 @@ async function createPDF(student){
 	await browser.close();
 }
 
-const student = {
-
+const data = {
+	title: "A new Brazilian School",
+	date: "05/12/2018",
+	name: "Rodolfo Luis Marcos",
+	age: 28,
+	birthdate: "12/07/1990",
+	course: "Computer Science",
+	obs: "Graduated in 2014 by Federal University of Lavras, work with Full-Stack development and E-commerce."
 }
 
-createPDF(student);
+createPDF(data);
