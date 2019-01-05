@@ -1,0 +1,23 @@
+{
+  "name": "pdf-generator-sample",
+  "version": "1.0.0",
+  "description": "A simple pdf generator app",
+  "main": "pdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodolfo-marcos07/pdf-generator-sample.git"
+  },
+  "author": "Rodolfo Marcos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodolfo-marcos07/pdf-generator-sample/issues"
+  },
+  "homepage": "https://github.com/rodolfo-marcos07/pdf-generator-sample#readme",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "puppeteer": "^1.11.0"
+  }
+}

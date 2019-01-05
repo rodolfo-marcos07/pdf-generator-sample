@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student's profile</title>
+	<head>
+	<style type="text/css">
+		body{
+			width: 1200px;
+			margin: 0;
+			padding: 0px;
+			font-size: 16px;
+			line-height: 24px;
+			font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+			color: rgb(33,33,33);
+		}
+		.report-header{
+			background: rgb(178,230,212);
+			color: rgb(102,102,102);
+			padding: 15px;
+			padding-left: 200px;
+			box-sizing: border-box;
+			display: block;
+			position: relative;
+		}
+		.report-header .logo{
+			position: absolute;
+			top: 40px;
+			left: 15px;
+			width: 150px;
+		}
+		.report-footer{
+			background: rgb(178,230,212);
+			color: rgb(102,102,102);
+			padding: 15px;
+			box-sizing: border-box;
+			display: block;
+			position: relative;
+		}
+		.report-body{
+			width: 70%;
+			display: inline-block;
+			position: relative;
+			padding: 15px;
+			box-sizing: border-box;
+			vertical-align: top;
+		}
+		.report-photo{
+			width: 28%;
+			display: inline-block;
+			position: relative;
+			vertical-align: top;
+			box-sizing: border-box;
+			margin-top: 15px;
+		}
+		.report-body .info p{
+			border: #ccc solid 1px;
+			padding: 5px;
+			display: block;
+			position: relative;
+		}
+	</style>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="report-header">
+		<img src="logo.png" class="logo">
+		<h3>{{title}}</h3>
+		<p>{{date}}</p>
+	</div>
+	<div class="report-body">
+		<div class="info">
+			<p>Student: {{name}}</p>
+			<p>OEN: {{oen}}</p>
+			<p>Age: {{age}}</p>
+			<p>Birthdate: {{birthdate}}</p>
+			<p>Course: {{course}}</p>
+		</div>
+		<div class="obs">
+			<p>Obs: {{obs}}</p>
+		</div>
+	</div>
+	<div class="report-photo">
+		<img src="student.png">
+	</div>
+	<div class="report-footer">
+		A generic Company - All Rights reserved.
+	</div>
+</body>
+</html>
